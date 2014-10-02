@@ -56,7 +56,8 @@ public class MainActivity extends Activity {
 				progress.cancel();
 			}
 			Toast t = Toast.makeText(MainActivity.this, "Ê±¼äµ½¡£¡£¡£¡£", 1000);
-			t.setGravity(Gravity.CENTER, 0, 0);
+			t.setGravity(Gravity.BOTTOM, 0, 0);
+			t.show();
 		}
 	};
 }
