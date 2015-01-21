@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="180dp"
+    android:orientation="vertical" 
+    android:background="#FF000000"
+    android:gravity="center_horizontal">
+    
+	  <com.ant.liao.GifView
+		android:id="@+id/gif_commit_loading" 
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:paddingTop="25dp" android:enabled="false" />
+	  <TextView
+	      android:id="@+id/txt_commit_loading" 
+	      android:layout_height="wrap_content" android:layout_width="wrap_content"
+	      android:text="请等待"
+	      android:textColor="#FFFFFFFF"
+	      android:textSize="21sp"
+	      android:paddingTop="20dp" 
+	      />
+</LinearLayout>

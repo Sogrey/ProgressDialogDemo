@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+import com.ant.liao.GifView;
+
 /**
  * @author Administrator
  *
@@ -29,8 +31,13 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				progress= ProgressDialog.show(MainActivity.this, "提示", "正在登录，请稍后...");
+//				progress= ProgressDialog.show(MainActivity.this, "提示", "正在登录，请稍后...");//系统的
+				progress = new ProgressDialog(MainActivity.this);//自定义
+				progress.setCancelable(false);
+				progress.show();
+				progress.setContentView(R.layout.dialog_commit_gif);
+				GifView gif = (GifView)progress.findViewById(R.id.gif_commit_loading);
+				gif.setGifImage(R.drawable.loading);
 				new Thread() {
 					@Override
 					public void run() {
